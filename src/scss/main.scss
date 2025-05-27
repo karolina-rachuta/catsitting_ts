@@ -1,0 +1,64 @@
+@import "settings/reset";
+@import "settings/variables";
+@import "settings/colors";
+@import "settings/fonts";
+@import "settings/utility";
+@import "settings/fadein";
+@import "components/navigation";
+@import "components/modal";
+@import "components/query";
+@import "components/hero";
+@import "components/info";
+@import "components/about";
+@import "components/order";
+@import "components/contact";
+@import "components/footer";
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: $font-base;
+    font-weight: 400;
+    font-size: $base-font-size;
+    color: $primary-color;
+    width: 100%;
+    background-color: $base-color;
+    margin: 0 auto;
+}
+
+// body {
+//     z-index: 1;
+// }
+
+.container {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: pxToRem(15);
+
+    @media screen and (min-width:600px) {
+        padding: pxToRem(15) pxToRem(30);
+    }
+}
+
+// .btn {
+//     cursor: pointer;
+
+//     .btn:active {
+//         background-color: green;
+//     }
+// }
+
+.hidden {
+    visibility: hidden;
+}
+
+.no-visible {
+    display: none;
+}

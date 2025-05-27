@@ -1,0 +1,121 @@
+.container.container__about {
+    background-color: $base-color;
+    min-height: 500px;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    border-top: 2px solid $secondary-color;
+    // box-shadow: 0 2px 10px $secondary-color;
+    border-bottom: none;
+    padding: 0;
+    //margin-top: 20px;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+
+    // &:after {
+    //     content: "";
+    //     position: absolute;
+    //     top: 0;
+    //     bottom: 0;
+    //     left: 0;
+    //     right: 0;
+    //     background: white;
+    //     opacity: 0.2;
+    //     z-index: 1;
+    // }
+
+
+    @media screen and (min-width: 600px) {
+        border-top: none;
+        padding-bottom: 30px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        padding: pxToRem(25) pxToRem(30);
+        flex-direction: row;
+        // border-top: none;
+    }
+
+    .about__photo {
+        width: 100%;
+        height: auto;
+        max-width: 600px;
+        position: relative;
+        display: flex;
+        z-index: 0;
+        order: 2;
+
+        @media screen and (min-width: 600px) {
+            border-radius: 20px;
+            max-width: auto;
+            max-height: 1200px;
+        }
+
+        @media screen and (min-width: 1200px) {
+            width: 100%;
+            order: 1;
+            // border-radius: 20px;
+        }
+    }
+
+    .about__box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 1000px;
+        gap: 10px;
+        padding-top: 40px;
+        z-index: 2;
+        order: 1;
+
+        @media screen and (min-width: 1200px) {
+            padding-top: 50px;
+            order: 2;
+        }
+
+        h2 {
+            display: inline-block;
+            font-size: 30px;
+            font-weight: 600;
+
+            @media screen and (min-width: 550px) {
+                font-size: 40px;
+            }
+        }
+
+        h3 {
+            text-align: justify;
+            font-size: 20px;
+            font-weight: 600;
+            padding: 20px 20px 5px;
+            line-height: 1.7;
+            text-align: center;
+            color: #af3d8a;
+
+            @media only screen and (min-width: 550px) {
+                font-size: 20px;
+                padding: 20px 40px 5px;
+            }
+        }
+
+        p {
+            text-align: center;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 0px 20px 15px;
+            line-height: 1.7;
+            color: $primary-color;
+
+            @media only screen and (min-width: 550px) {
+                font-size: 20px;
+                padding: 0px 40px 15px;
+            }
+        }
+    }
+}

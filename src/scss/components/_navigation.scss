@@ -1,0 +1,226 @@
+header {
+    // border-bottom: 2px solid $secondary-color;
+    // box-shadow: 0 5px 10px $secondary-color;
+    border-bottom: 2px solid $base-color;
+    box-shadow: 0 5px 10px $base-color;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: pxToRem(5) pxToRem(20);
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+
+    nav {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        color: $primary-color;
+        height: 100%;
+
+        .logo__img {
+            width: 180px;
+            height: auto;
+            margin-top: 10px;
+        }
+
+        .nav__firstRow {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            background-color: $base-color;
+            gap: 20px;
+
+            @media screen and (min-width: 550px) {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .menu__box {
+                display: flex;
+                align-items: center;
+                gap: pxToRem(30);
+                justify-content: space-between;
+                width: 100%;
+                align-items: center;
+                padding-bottom: 15px;
+
+                @media screen and (min-width: 550px) {
+                    justify-content: end;
+                    padding-bottom: 0px;
+                }
+
+                .nav__order {
+                    font-family: $font-base;
+                    background-color: $primary-color;
+                    border-radius: 20px;
+                    color: $base-color;
+                    font-size: pxToRem(20);
+                    font-weight: 600;
+                    text-decoration: none;
+                    cursor: pointer;
+                    padding: 10px 20px;
+
+                    @media screen and (min-width: 550px) {
+                        padding: 12px 30px;
+                        font-size: pxToRem(22);
+                    }
+
+                }
+
+                img {
+                    width: 40px;
+                    height: auto;
+                    cursor: pointer;
+                }
+
+                .menu {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    width: 2.5em;
+                    height: 2rem;
+                    cursor: pointer;
+
+
+                    span {
+                        height: 0.26rem;
+                        width: 100%;
+                        background-color: $primary-color;
+                        border-radius: 0.2rem;
+                    }
+
+
+                }
+            }
+        }
+
+        .nav__hamburder {
+            ul {
+                display: none;
+                width: 100%;
+                border-bottom-right-radius: 8px;
+                border-bottom-left-radius: 8px;
+                flex-direction: column;
+                position: absolute;
+                top: pxToRem(150);
+                right: 0;
+                padding: pxToRem(10);
+                z-index: 1;
+                background-color: $base-color;
+                opacity: 0.8;
+                z-index: 10;
+
+                @media screen and (min-width: 550px) {
+                    top: pxToRem(76);
+                    right: 0;
+                }
+
+                @media screen and (min-width: 750px) {
+                    top: pxToRem(76);
+                    right: 0;
+                }
+
+                @media screen and (min-width: 1000px) {
+                    width: 600px;
+                    top: pxToRem(76);
+                }
+
+                @media screen and (min-width: 1200px) {
+                    width: 600px;
+                    top: pxToRem(76);
+                }
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background: $third-color;
+                    opacity: 0.1;
+                    z-index: 0;
+                }
+
+                &.open {
+                    display: flex;
+                }
+
+                .menu__link {
+                    font-size: 20px;
+                    padding-top: 14px;
+                    line-height: 1.5;
+                    font-weight: 500;
+
+                    @media screen and (min-width: 550px) {
+                        font-size: 24px;
+                    }
+                }
+
+                .menu__icons {
+                    display: flex;
+                    gap: pxToRem(10);
+                    align-items: center;
+                    justify-content: start;
+
+                    @media screen and (min-width: 550px) {
+                        margin-top: pxToRem(60);
+                    }
+
+                    a {
+                        padding: pxToRem(14) pxToRem(14);
+
+                        .fa-brands,
+                        .fa-solid {
+                            font-size: pxToRem(30);
+                            color: white;
+                            font-weight: bold;
+                        }
+                    }
+                }
+
+                li {
+                    list-style: none;
+                    position: relative;
+                    z-index: 1;
+                    width: 100%;
+                    text-align: left;
+
+
+                    a {
+                        display: block;
+                        text-decoration: none;
+                        color: $primary-color;
+                        padding: pxToRem(14) pxToRem(14);
+                        padding-right: pxToRem(80);
+                        border-radius: pxToRem(8);
+                        cursor: pointer;
+                        position: relative;
+                        z-index: 1;
+                        display: flex;
+                        align-items: center;
+                        justify-content: start;
+                        gap: pxToRem(15);
+
+                        &:not(:active):hover {
+                            background-color: $secondary-color;
+                            position: relative;
+                            z-index: 1;
+                        }
+
+                        &:active {
+                            background-color: $secondary-color;
+                            position: relative;
+                            z-index: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
