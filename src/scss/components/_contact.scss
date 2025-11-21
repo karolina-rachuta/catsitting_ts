@@ -4,7 +4,6 @@
     justify-content: center;
     width: 100%;
     align-items: start;
-    // padding: pxToRem(15) pxToRem(30);
     margin: 10px auto;
     max-width: 1600px;
     padding: 20px 10px;
@@ -16,27 +15,13 @@
         margin: 100px auto;
     }
 
-    // h2 {
-    //     text-align: center;
-    //     width: 100%;
-    //     display: inline-block;
-    //     font-size: 30px;
-    //     font-weight: 600;
-
-    //     @media screen and (min-width: 550px) {
-    //         font-size: 40px;
-    //     }
-    // }
-
     .contact__body {
-
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
 
         @media screen and (min-width: 550px) {
-
             flex-direction: row;
         }
 
@@ -51,7 +36,6 @@
 
             @media screen and (min-width: 550px) {
                 width: 50%;
-
             }
 
             h2 {
@@ -63,7 +47,6 @@
             p {
                 font-size: 18px;
                 margin-top: 20px;
-                //text-align: center;
             }
         }
 
@@ -107,9 +90,7 @@
 
                 @media screen and (min-width: 600px) {
                     align-self: start;
-
                 }
-
             }
         }
 
@@ -137,7 +118,7 @@
         }
 
         .error {
-            color: rgb(158, 64, 64)
+            color: rgb(158, 64, 64);
         }
 
         .success {

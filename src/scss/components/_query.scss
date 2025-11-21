@@ -18,8 +18,6 @@
             margin-bottom: pxToRem(10);
         }
 
-
-
         .progress {
             width: 50%;
             /* 1/6 for first step */
@@ -47,10 +45,10 @@
         }
 
         select,
-        input[type="text"],
-        input[type="email"],
-        input[type="date"],
-        input[type="tel"],
+        input[type='text'],
+        input[type='email'],
+        input[type='date'],
+        input[type='tel'],
         textarea {
             width: 100%;
             padding: pxToRem(8);
