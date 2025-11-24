@@ -3,6 +3,7 @@
     "version": "0.1.0",
     "private": true,
     "dependencies": {
+        "@emailjs/browser": "^4.4.1",
         "@testing-library/dom": "^10.4.0",
         "@testing-library/jest-dom": "^6.6.3",
         "@testing-library/react": "^16.3.0",
@@ -15,6 +16,7 @@
         "react-dom": "^19.1.0",
         "react-router-dom": "^7.6.1",
         "react-scripts": "^5.0.1",
+        "react-scroll": "^1.9.3",
         "sass": "^1.89.0",
         "web-vitals": "^2.1.4"
     },
@@ -23,8 +25,8 @@
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
-        "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
-        "lint-fix": "eslint \"src/**/*.{js,jsx}\" --fix",
+        "lint": "eslint \"src/**/*.{js,jsx, ts, tsx}\" --quiet",
+        "lint-fix": "eslint \"src/**/*.{ts, tsx, js,jsx}\" --fix",
         "format": "prettier --write ."
     },
     "eslintConfig": {
@@ -48,6 +50,7 @@
     "devDependencies": {
         "@eslint/js": "^9.27.0",
         "@types/react-router-dom": "^5.3.3",
+        "@types/react-scroll": "^1.8.10",
         "eslint": "^8.57.1",
         "eslint-config-prettier": "^10.1.8",
         "eslint-plugin-prettier": "^5.5.4",
