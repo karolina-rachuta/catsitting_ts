@@ -1,22 +1,18 @@
-import React, { useContext } from 'react';
-import { FormContext } from '../../../context/QueryContext';
+import React, { FC } from 'react';
+import useFormContext from '../../../context/useFormContext';
+import clsx from 'clsx';
 
-function QueryNavigation() {
-    const context = useContext(FormContext);
-
-    if (!context) {
-        throw Error('Context is undefined');
-    }
+const QueryNavigation: FC = () => {
     const {
-        forms: { step, isValid },
+        forms: { step },
         setFormValues,
-    } = context;
+    } = useFormContext();
 
     return (
         <div className="survey-navigation">
             <button
                 type="button"
-                className={step !== 0 ? 'prev-btn' : ' hidden'}
+                className={clsx('prev-btn', { hidden: step === 0 })}
                 onClick={() => setFormValues('step', step - 1)}
             >
                 Previous
@@ -24,7 +20,7 @@ function QueryNavigation() {
 
             <button
                 type="button"
-                className={step !== 1 ? 'next-btn' : 'hidden'}
+                className={clsx('next-btn', { hidden: step === 1 })}
                 onClick={() => setFormValues('step', step + 1)}
             >
                 Next
@@ -32,7 +28,7 @@ function QueryNavigation() {
 
             <button
                 type="submit"
-                className={step === 1 ? 'submit-btn' : 'no-visible'}
+                className={clsx('submit-btn', { hidden: step !== 1 })}
             >
                 Submit
             </button>

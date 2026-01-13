@@ -1,21 +1,13 @@
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';
 import { MouseEventHandler, FormEvent } from 'react';
 
-import { FormContext } from '../../context/QueryContext';
+import useFormContext from '../../context/useFormContext';
 import Step1 from './Query/Step1';
 import Step2 from './Query/Step2';
 import ProgressBar from './Query/ProgressBar';
 import QueryNavigation from './Query/QueryNavigation';
 
 import emailjs from '@emailjs/browser';
-
-//walidacja kalendarza
-//error messages
-//required
-//submit and close
-//thank you message after submit
-//conctact and about-styling
-//rechapta
 
 type QueryPropsType = {
     open: boolean;
@@ -28,11 +20,7 @@ function Query({ open, onClose, setIsOpen }: QueryPropsType) {
     const [error, setError] = useState<string>('');
     const [requiredMessage, setRequiredMessage] = useState<string>('');
 
-    const context = useContext(FormContext);
-    if (!context) {
-        throw Error('Context is undefined');
-    }
-    const { forms, setForms, INITIAL_FORM } = context;
+    const { forms, setForms, initialForm } = useFormContext();
 
     if (!open) return null;
 
@@ -82,7 +70,8 @@ function Query({ open, onClose, setIsOpen }: QueryPropsType) {
                 })
                 .then((response) => {
                     console.log('Email was sent successfully', response);
-                    setForms(INITIAL_FORM);
+                    setForms(initialForm);
+                    setIsOpen(false);
                 })
                 .catch((error) => console.error('Error sending email:', error));
         } else {

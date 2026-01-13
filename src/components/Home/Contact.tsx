@@ -62,10 +62,10 @@ function Contact() {
     }
 
     return (
-        <div className="contact__container">
+        <div className="contact__container" id="contact">
             <div className="contact__body">
                 <div className="contact__left">
-                    <h2>Do you have more questions?</h2>
+                    <h2>Any questions?</h2>
                     <p>Do not hesitate to contact us!</p>
                 </div>
                 <form onSubmit={handleSubmit} className="contact__right">
@@ -95,7 +95,7 @@ function Contact() {
                         placeholder="Your questions, dates, how many cats, which catsitting option ect."
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
-                    ></textarea>
+                    />
                     <button
                         className={success ? 'active' : 'btn'}
                         type="submit"

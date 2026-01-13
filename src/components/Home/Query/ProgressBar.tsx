@@ -1,15 +1,10 @@
-import React, { useContext } from 'react';
-import { FormContext } from '../../../context/QueryContext';
+import React, { FC } from 'react';
+import useFormContext from '../../../context/useFormContext';
 
-function ProgressBar() {
-    const context = useContext(FormContext);
-    if (!context) {
-        throw Error('Context is undefined');
-    }
-
+const ProgressBar: FC = () => {
     const {
         forms: { step },
-    } = context;
+    } = useFormContext();
 
     return (
         <div className="survey-header">

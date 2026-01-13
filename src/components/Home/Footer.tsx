@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../../assets/logo.png';
 import Whatsapp from '../../assets/whatsapp.svg';
+import MenuList from './Header/MenuList';
 
 function Footer() {
     return (
@@ -15,17 +16,11 @@ function Footer() {
                             alt="Logo with the company name Gary and Larry and cat paws"
                         />
                     </Link>
-                    <div className="footer__details">
-                        <p></p>
-                        <p>
-                            <a href=""></a>
-                        </p>
-                    </div>
                 </div>
 
                 <div className="footer__socials">
-                    Downtown and Bussines Bay <br />
-                    Dubai
+                    Blackheath SE3<br />
+                    London, UK
                 </div>
             </div>
             <div className="footer__copyrights">
