@@ -2,6 +2,5 @@
 @import './variables';
 
 @function pxToRem($value, $base: $base-font-size) {
-
     @return math.div($value, $base) * 1rem;
 }

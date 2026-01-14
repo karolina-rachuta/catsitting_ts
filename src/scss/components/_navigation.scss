@@ -1,6 +1,4 @@
 header {
-    // border-bottom: 2px solid $secondary-color;
-    // box-shadow: 0 5px 10px $secondary-color;
     border-bottom: 2px solid $base-color;
     box-shadow: 0 5px 10px $base-color;
     width: 100%;
@@ -69,7 +67,6 @@ header {
                         padding: 12px 30px;
                         font-size: pxToRem(22);
                     }
-
                 }
 
                 img {
@@ -86,15 +83,12 @@ header {
                     height: 2rem;
                     cursor: pointer;
 
-
                     span {
                         height: 0.26rem;
                         width: 100%;
                         background-color: $primary-color;
                         border-radius: 0.2rem;
                     }
-
-
                 }
             }
         }
@@ -136,7 +130,7 @@ header {
                 }
 
                 &:after {
-                    content: "";
+                    content: '';
                     position: absolute;
                     top: 0;
                     bottom: 0;
@@ -190,7 +184,6 @@ header {
                     z-index: 1;
                     width: 100%;
                     text-align: left;
-
 
                     a {
                         display: block;
