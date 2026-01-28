@@ -55,7 +55,7 @@ export const services: Service[] = [
         label: '2h - £50',
     },
     {
-        id: 4,
+        id: 5,
         src: '',
         alt: '',
         hdl: 'Half day care (4h)',
@@ -66,7 +66,7 @@ export const services: Service[] = [
         label: 'Half Day Care (4h) - £70',
     },
     {
-        id: 5,
+        id: 6,
         src: '',
         alt: '',
         hdl: 'Day care (8h)',
