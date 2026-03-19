@@ -6,7 +6,6 @@
     align-items: center;
     flex-direction: column;
     gap: 20px;
-    border-top: 2px solid $secondary-color;
     border-bottom: none;
     padding: 0;
     position: relative;
@@ -26,6 +25,10 @@
         width: 100%;
         display: flex;
         align-items: start;
+flex-direction: column;
+@media screen and (min-width: 800px) {
+    flex-direction: row;
+}
 
         .about__paragraph {
             width: 100%;
@@ -47,6 +50,8 @@
         padding-top: 40px;
         z-index: 2;
         order: 1;
+        padding-left: 15px;
+        padding-right: 15px;
 
         @media screen and (min-width: 1200px) {
             padding-top: 50px;
