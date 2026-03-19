@@ -1,5 +1,5 @@
 header {
-    border-bottom: 2px solid $base-color;
+    border-bottom: 1px solid lightgray;
     box-shadow: 0 5px 10px $base-color;
     width: 100%;
     max-width: 1600px;
@@ -18,7 +18,7 @@ header {
         height: 100%;
 
         .logo__img {
-            width: 180px;
+            width: 250px;
             height: auto;
             margin-top: 10px;
         }
@@ -29,7 +29,6 @@ header {
             width: 100%;
             justify-content: center;
             align-items: center;
-            background-color: $base-color;
             gap: 20px;
 
             @media screen and (min-width: 550px) {
@@ -55,7 +54,7 @@ header {
                 .nav__order {
                     font-family: $font-base;
                     background-color: $primary-color;
-                    border-radius: 20px;
+                    border-radius: 10px;
                     color: $base-color;
                     font-size: pxToRem(20);
                     font-weight: 600;
@@ -84,7 +83,7 @@ header {
                     cursor: pointer;
 
                     span {
-                        height: 0.26rem;
+                        height: 0.3rem;
                         width: 100%;
                         background-color: $primary-color;
                         border-radius: 0.2rem;

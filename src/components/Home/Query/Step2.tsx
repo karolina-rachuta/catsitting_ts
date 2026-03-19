@@ -2,14 +2,14 @@ import React, { ChangeEvent, FC } from 'react';
 import useFormContext from '../../../context/useFormContext';
 
 type Form = {
-    id: number,
-    label: string,
+    id: number;
+    label: string;
     key: 'name' | 'email' | 'phone' | 'address';
-    value: string,
-    type: React.HTMLInputTypeAttribute,
-    placeholder: string,
-    required: boolean
-}
+    value: string;
+    type: React.HTMLInputTypeAttribute;
+    placeholder: string;
+    required: boolean;
+};
 
 const Step2: FC = () => {
     const {
@@ -17,11 +17,9 @@ const Step2: FC = () => {
         setFormValues,
     } = useFormContext();
 
-
-    const handleChange = (key: Form['key']) => (
-        (e: ChangeEvent<HTMLInputElement>) => setFormValues(key, e.target.value)
-    )
-
+    const handleChange =
+        (key: Form['key']) => (e: ChangeEvent<HTMLInputElement>) =>
+            setFormValues(key, e.target.value);
 
     const form: Form[] = [
         {
@@ -31,7 +29,7 @@ const Step2: FC = () => {
             value: name,
             type: 'text',
             placeholder: 'your name',
-            required: true
+            required: true,
         },
         {
             id: 2,
@@ -40,7 +38,7 @@ const Step2: FC = () => {
             value: email,
             type: 'email',
             placeholder: 'your email',
-            required: true
+            required: true,
         },
         {
             id: 3,
@@ -49,7 +47,7 @@ const Step2: FC = () => {
             value: phone,
             type: 'phone',
             placeholder: 'your phone',
-            required: true
+            required: true,
         },
         {
             id: 4,
@@ -58,9 +56,9 @@ const Step2: FC = () => {
             value: address,
             type: 'text',
             placeholder: 'your address',
-            required: true
-        }
-    ]
+            required: true,
+        },
+    ];
     return (
         <div className="survey-step" data-step="2">
             <h1 className="modal-hdl">Your booking query</h1>
@@ -68,7 +66,7 @@ const Step2: FC = () => {
             {form.map((input) => (
                 <label key={input.id}>
                     {input.label}
-                    < input
+                    <input
                         type={input.type}
                         value={input.value}
                         onChange={handleChange(input.key)}
@@ -78,8 +76,8 @@ const Step2: FC = () => {
                     />
                 </label>
             ))}
-        </div >
+        </div>
     );
-}
+};
 
 export default Step2;

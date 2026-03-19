@@ -1,13 +1,13 @@
 .footer__container {
-    background-color: #622b93;
-    color: $base-color;
+    background-color: $background;
+    color: $secondary-color;
     height: 100%;
     min-height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    border-top: 2px solid $secondary-color;
+    border-top: 2px solid $muted-primary-color;
 
     @media screen and (min-width: 650px) {
         flex-direction: row;
@@ -25,7 +25,7 @@
 
         .logo {
             .logo__img {
-                max-width: 100px;
+                max-width: 200px;
                 width: 100%;
                 height: auto;
             }
@@ -67,9 +67,9 @@
 
 .footer__copyrights {
     width: 100%;
-    background-color: #260842;
+    background-color: $primary-color;
     text-align: center;
-    color: $base-color;
+    color: $secondary-color;
     font-weight: 300;
     font-size: 11px;
     padding: 5px;

@@ -19,6 +19,6 @@ const ProgressBar: FC = () => {
             </div>
         </div>
     );
-}
+};
 
 export default ProgressBar;

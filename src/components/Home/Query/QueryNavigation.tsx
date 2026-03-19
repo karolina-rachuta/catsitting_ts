@@ -34,6 +34,6 @@ const QueryNavigation: FC = () => {
             </button>
         </div>
     );
-}
+};
 
 export default QueryNavigation;

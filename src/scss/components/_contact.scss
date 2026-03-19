@@ -42,11 +42,13 @@
                 font-size: 35px;
                 line-height: 1.2;
                 font-weight: 600;
+                color: $secondary-color
             }
 
             p {
                 font-size: 18px;
                 margin-top: 20px;
+                color: $muted-foreground;
             }
         }
 
@@ -64,7 +66,7 @@
             textarea {
                 padding: 8px;
                 border: 1px solid $secondary-color;
-                border-radius: 8px;
+                border-radius: 5px;
                 max-width: 600px;
             }
 
@@ -72,26 +74,26 @@
             textarea::placeholder {
                 font-family: $font-base;
                 font-size: 16px;
-                color: $primary-color;
+                color: $muted-foreground;
             }
 
-            .btn {
-                background: $primary-color;
-                text-decoration: none;
-                color: $base-color;
-                width: 200px;
-                padding: 12px 30px;
-                border-radius: 25px;
-                font-size: 18px;
-                font-weight: 600;
-                border: transparent;
-                cursor: pointer;
-                align-self: center;
+            // .btn {
+            //     background: $primary-color;
+            //     text-decoration: none;
+            //     color: $base-color;
+            //     width: 200px;
+            //     padding: 12px 30px;
+            //     border-radius: 25px;
+            //     font-size: 18px;
+            //     font-weight: 600;
+            //     border: transparent;
+            //     cursor: pointer;
+            //     align-self: center;
 
-                @media screen and (min-width: 600px) {
-                    align-self: start;
-                }
-            }
+            //     @media screen and (min-width: 600px) {
+            //         align-self: start;
+            //     }
+            // }
         }
 
         .active {

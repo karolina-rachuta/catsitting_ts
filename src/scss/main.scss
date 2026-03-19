@@ -10,7 +10,8 @@
 @import 'components/hero';
 @import 'components/info';
 @import 'components/about';
-@import 'components/order';
+@import 'components/whychooseus';
+@import 'components/services';
 @import 'components/contact';
 @import 'components/footer';
 
@@ -27,7 +28,7 @@ body {
     font-size: $base-font-size;
     color: $primary-color;
     width: 100%;
-    background-color: $base-color;
+    background-color: $background;
     margin: 0 auto;
 }
 
@@ -36,9 +37,9 @@ body {
     max-width: 1600px;
     margin: 0 auto;
     padding: pxToRem(15);
-
+    background-color: $background;
     @media screen and (min-width: 600px) {
-        padding: pxToRem(15) pxToRem(30);
+        padding: pxToRem(50) pxToRem(30);
     }
 }
 
@@ -48,4 +49,16 @@ body {
 
 .no-visible {
     display: none;
+}
+
+.btn {
+    background-color: $primary-color;
+    color: $base-color;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 24px;
+    width: 200px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid $secondary-foreground;
 }

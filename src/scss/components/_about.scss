@@ -1,9 +1,8 @@
 .container.container__about {
-    background-color: $base-color;
     min-height: 500px;
     height: 100%;
     display: flex;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 20px;
@@ -21,27 +20,19 @@
 
     @media screen and (min-width: 1200px) {
         padding: pxToRem(25) pxToRem(30);
-        flex-direction: row;
     }
 
-    .about__photo {
+    .about__wrapper {
         width: 100%;
-        height: auto;
-        max-width: 600px;
-        position: relative;
         display: flex;
-        z-index: 0;
-        order: 2;
+        align-items: start;
 
-        @media screen and (min-width: 600px) {
-            border-radius: 20px;
-            max-width: auto;
-            max-height: 1200px;
-        }
-
-        @media screen and (min-width: 1200px) {
+        .about__paragraph {
             width: 100%;
-            order: 1;
+
+            @media screen and (min-width: 800px) {
+                width: 50%;
+            }
         }
     }
 
@@ -66,20 +57,21 @@
             display: inline-block;
             font-size: 30px;
             font-weight: 600;
-
+            margin-bottom: 30px;
+            color:$secondary-color;
             @media screen and (min-width: 550px) {
                 font-size: 40px;
             }
         }
 
-        h3 {
+        .question {
             text-align: justify;
             font-size: 20px;
             font-weight: 600;
             padding: 20px 20px 5px;
             line-height: 1.7;
-            text-align: center;
-            color: #af3d8a;
+            text-align: left;
+            color: $primary-color;
 
             @media only screen and (min-width: 550px) {
                 font-size: 20px;
@@ -87,13 +79,13 @@
             }
         }
 
-        p {
-            text-align: center;
+        .answer {
+            text-align: left;
             font-size: 16px;
-            font-weight: 600;
+            font-weight: 400;
             padding: 0px 20px 15px;
             line-height: 1.7;
-            color: $primary-color;
+            color: $secondary-color;
 
             @media only screen and (min-width: 550px) {
                 font-size: 20px;

@@ -23,7 +23,6 @@ export type Form = {
 };
 
 const Step1: FC = () => {
-
     const {
         forms: {
             catsName,
@@ -42,7 +41,13 @@ const Step1: FC = () => {
     }));
 
     const handleChange =
-        (key: Form['key']) => (e: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLSelectElement> | ChangeEvent<HTMLTextAreaElement>) =>
+        (key: Form['key']) =>
+        (
+            e:
+                | ChangeEvent<HTMLInputElement>
+                | ChangeEvent<HTMLSelectElement>
+                | ChangeEvent<HTMLTextAreaElement>,
+        ) =>
             setFormValues(key, e.target.value);
 
     const form: Form[] = [
@@ -103,8 +108,8 @@ const Step1: FC = () => {
             type: 'textarea',
             placeholder:
                 'Please provide extra information about your cat health or ask a general question',
-        }
-    ]
+        },
+    ];
 
     return (
         <div className="survey-step" data-step="1">
@@ -113,22 +118,39 @@ const Step1: FC = () => {
             {form.map((field) => (
                 <label key={field.key}>
                     {field.label}
-                    {field.type === 'input' &&
-                        <input type={field.inputType} placeholder={field.placeholder} value={field.value} name={field.key} required={field.required} onChange={handleChange(field.key)} />}
+                    {field.type === 'input' && (
+                        <input
+                            type={field.inputType}
+                            placeholder={field.placeholder}
+                            value={field.value}
+                            name={field.key}
+                            required={field.required}
+                            onChange={handleChange(field.key)}
+                        />
+                    )}
 
-                    {field.type === 'select' &&
-                        <select value={field.value} onChange={handleChange(field.key)} required={field.required} name={field.key}>
+                    {field.type === 'select' && (
+                        <select
+                            value={field.value}
+                            onChange={handleChange(field.key)}
+                            required={field.required}
+                            name={field.key}
+                        >
                             <option value="" disabled>
                                 Choose one of the options below
                             </option>
                             {field.options?.map((option) => (
-                                <option key={option.value} value={option.value}> {option.label} </option>
-
+                                <option key={option.value} value={option.value}>
+                                    {' '}
+                                    {option.label}{' '}
+                                </option>
                             ))}
                             <option value="additional">
-                                I will explain in the message what I am looking for
+                                I will explain in the message what I am looking
+                                for
                             </option>
-                        </select>}
+                        </select>
+                    )}
 
                     {field.type === 'textarea' && (
                         <textarea
@@ -141,6 +163,6 @@ const Step1: FC = () => {
             ))}
         </div>
     );
-}
+};
 
 export default Step1;

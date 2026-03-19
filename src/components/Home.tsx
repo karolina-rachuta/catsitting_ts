@@ -6,6 +6,7 @@ import Service from './Home/Service';
 import Footer from './Home/Footer';
 import FadeIn from './FadeIn';
 import Contact from './Home/Contact';
+import WhyChooseUs from './Home/WhyChooseUs';
 import { FormContextProvider } from '../context/QueryContext';
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
         <FadeIn>
             <Header />
             <Hero />
+            <WhyChooseUs />
             <AboutUs />
             <FormContextProvider>
                 <Service />

@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC } from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 import Paw from '../../../assets/paw.svg';
 
@@ -20,9 +20,8 @@ const MenuList: FC = () => {
                     <img src={Paw} width="25" alt="Paw" /> Contact
                 </ScrollLink>
             </li>
-
         </>
-    )
-}
+    );
+};
 
-export default MenuList
+export default MenuList;
