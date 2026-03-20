@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../../assets/logo_orange.webp';
 import Whatsapp from '../../assets/whatsapp.svg';
-import MenuList from './Header/MenuList';
 
 function Footer() {
     return (

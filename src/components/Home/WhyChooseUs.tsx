@@ -45,21 +45,22 @@ const AdvertisementList: Advertisement[] = [
 function WhyChooseUs() {
     return (
         <div className="container" id="chooseus">
-            <h2 className='chooseus-hdl'>Why Choose Our Cat Sitting Service?</h2>
-            <p className='chooseus-desc'>Professional, reliable care that keeps your cat comfortable and happy at home.</p>
-            <Box className="card-container">
+            <h2 className="sections__hdl">
+                Why Choose Our Cat Sitting Service?
+            </h2>
+            <p className="sections__text">
+                Professional, reliable care that keeps your cat comfortable and
+                happy at home.
+            </p>
+            <Box className="card__container">
                 {AdvertisementList.map((item) => (
-                    <Card
-                        key={item.id}
-                        variant="outlined"
-                        className="card-wrapper"
-                    >
-                        <Box className="icon-box">{item.icon}</Box>
-                        <CardContent className="text-wrapper">
-                            <Typography className="text-hdl">
+                    <Card key={item.id} className="card__wrapper">
+                        <Box className="icon__box">{item.icon}</Box>
+                        <CardContent className="text__wrapper">
+                            <Typography className="card__hdl">
                                 {item.title}
                             </Typography>
-                            <Typography className="text-desc">
+                            <Typography className="card__text">
                                 {item.desc}
                             </Typography>
                         </CardContent>

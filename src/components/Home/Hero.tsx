@@ -3,12 +3,13 @@ import Logo from '../../assets/2.png';
 import image from '../../assets/IMG_1641.webp';
 const Hero = () => {
     return (
-        <div className="container container__hero" id="hero">
-            <div className="hdl-wrapper">
-                <h1>
-                    Professional Cat Care <span> While You're Away</span>
+        <div className="container section__container" id="hero">
+            <div className="hdl__wrapper">
+                <h1 className="hero__hdl">
+                    Professional Cat Care{' '}
+                    <span className="hero__hdl-orange"> While You're Away</span>
                 </h1>
-                <p>
+                <p className="hero__text">
                     Trusted, loving care for your feline friends. Daily visits,
                     playtime, feeding, and lots of cuddles in the comfort of
                     their own home.

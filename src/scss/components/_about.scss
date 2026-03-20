@@ -1,72 +1,28 @@
-.container.container__about {
-    min-height: 500px;
-    height: 100%;
+.about__box {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    gap: 20px;
-    border-bottom: none;
-    padding: 0;
-    position: relative;
-    z-index: 1;
     width: 100%;
-
-    @media screen and (min-width: 600px) {
-        border-top: none;
-        padding-bottom: 30px;
-    }
+    gap: 10px;
+    padding-top: 40px;
 
     @media screen and (min-width: 1200px) {
-        padding: pxToRem(25) pxToRem(30);
+        padding-top: 50px;
+        order: 2;
     }
 
     .about__wrapper {
         width: 100%;
         display: flex;
         align-items: start;
-flex-direction: column;
-@media screen and (min-width: 800px) {
-    flex-direction: row;
-}
+        flex-direction: column;
+        @media screen and (min-width: 800px) {
+            flex-direction: row;
+        }
 
         .about__paragraph {
             width: 100%;
-
-            @media screen and (min-width: 800px) {
-                width: 50%;
-            }
-        }
-    }
-
-    .about__box {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        max-width: 1000px;
-        gap: 10px;
-        padding-top: 40px;
-        z-index: 2;
-        order: 1;
-        padding-left: 15px;
-        padding-right: 15px;
-
-        @media screen and (min-width: 1200px) {
-            padding-top: 50px;
-            order: 2;
-        }
-
-        h2 {
-            display: inline-block;
-            font-size: 30px;
-            font-weight: 600;
-            margin-bottom: 30px;
-            color:$secondary-color;
-            @media screen and (min-width: 550px) {
-                font-size: 40px;
-            }
         }
 
         .question {
@@ -79,7 +35,7 @@ flex-direction: column;
             color: $primary-color;
 
             @media only screen and (min-width: 550px) {
-                font-size: 20px;
+                font-size: 24px;
                 padding: 20px 40px 5px;
             }
         }

@@ -3,6 +3,7 @@ import Header from './Home/Header';
 import Hero from './Home/Hero';
 import AboutUs from './Home/AboutUs';
 import Service from './Home/Service';
+import FAQ from './Home/FAQ';
 import Footer from './Home/Footer';
 import FadeIn from './FadeIn';
 import Contact from './Home/Contact';
@@ -19,6 +20,7 @@ const Home = () => {
             <FormContextProvider>
                 <Service />
             </FormContextProvider>
+            <FAQ />
             <Contact />
             <Footer />
         </FadeIn>
