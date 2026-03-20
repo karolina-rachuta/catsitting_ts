@@ -44,7 +44,7 @@ const AdvertisementList: Advertisement[] = [
 
 function WhyChooseUs() {
     return (
-        <div className="container" id="chooseus">
+        <div className="container section__container-col" id="chooseus">
             <h2 className="sections__hdl">
                 Why Choose Our Cat Sitting Service?
             </h2>
