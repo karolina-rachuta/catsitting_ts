@@ -62,11 +62,14 @@ function Contact() {
     }
 
     return (
-        <div className="contact__container" id="contact">
+        <div className="container section__container" id="contact">
             <div className="contact__body">
                 <div className="contact__left">
-                    <h2>Any questions?</h2>
-                    <p>Do not hesitate to contact us!</p>
+                    <h2 className="sections__hdl">Get in Touch</h2>
+                    <p className="sections__text">
+                        Ready to book or have questions? We'd love to hear from
+                        you!
+                    </p>
                 </div>
                 <form onSubmit={handleSubmit} className="contact__right">
                     <input

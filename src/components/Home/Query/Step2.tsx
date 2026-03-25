@@ -22,7 +22,7 @@ const Step2: FC = () => {
             key: 'name',
             type: 'text',
             placeholder: 'your name',
-            required: true
+            required: true,
         },
         {
             id: 2,
@@ -30,7 +30,7 @@ const Step2: FC = () => {
             key: 'email',
             type: 'email',
             placeholder: 'your email',
-            required: true
+            required: true,
         },
         {
             id: 3,
@@ -38,7 +38,7 @@ const Step2: FC = () => {
             key: 'phone',
             type: 'phone',
             placeholder: 'your phone',
-            required: true
+            required: true,
         },
         {
             id: 4,
@@ -46,9 +46,9 @@ const Step2: FC = () => {
             key: 'address',
             type: 'text',
             placeholder: 'your address',
-            required: true
-        }
-    ]
+            required: true,
+        },
+    ];
     return (
         <div className="survey-step" data-step="2">
             <h1 className="modal-hdl">Your booking query</h1>
@@ -56,7 +56,7 @@ const Step2: FC = () => {
             {formFields.map((input) => (
                 <label key={input.id}>
                     {input.label}
-                    < input
+                    <input
                         type={input.type}
                         placeholder={input.placeholder}
                         {...register(input.key, input.required ? {
@@ -75,8 +75,8 @@ const Step2: FC = () => {
                     }
                 </label>
             ))}
-        </div >
+        </div>
     );
-}
+};
 
 export default Step2;

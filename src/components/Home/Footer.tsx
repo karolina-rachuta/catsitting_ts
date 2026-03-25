@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Logo from '../../assets/logo.png';
+import Logo from '../../assets/logo_orange.webp';
 import Whatsapp from '../../assets/whatsapp.svg';
-import MenuList from './Header/MenuList';
 
 function Footer() {
     return (
@@ -19,7 +18,8 @@ function Footer() {
                 </div>
 
                 <div className="footer__socials">
-                    Blackheath SE3<br />
+                    Blackheath SE3
+                    <br />
                     London, UK
                 </div>
             </div>
