@@ -47,7 +47,7 @@ export const services: Service[] = [
         label: '2h - £50',
     },
     {
-        id: 4,
+        id: 5,
         hdl: 'Half day care (4h)',
         description:
             'Half-day cat sitting: feeding, cleaning the litter tray, playing, providing company, and giving lots of attention.',
@@ -56,7 +56,7 @@ export const services: Service[] = [
         label: 'Half Day Care (4h) - £70',
     },
     {
-        id: 5,
+        id: 6,
         hdl: 'Day care (8h)',
         description:
             'Full-day cat sitting: feeding, cleaning the litter tray, playing, providing company, and giving lots of attention.',
