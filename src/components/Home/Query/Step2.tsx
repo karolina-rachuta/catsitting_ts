@@ -1,34 +1,25 @@
-import React, { ChangeEvent, FC } from 'react';
-import useFormContext from '../../../context/useFormContext';
+import React, { FC } from 'react';
+import { useFormContext } from 'react-hook-form';
+import { QueryFormValues } from '../../../types/types'
 
-type Form = {
+
+type FormFields = {
     id: number,
     label: string,
     key: 'name' | 'email' | 'phone' | 'address';
-    value: string,
     type: React.HTMLInputTypeAttribute,
     placeholder: string,
     required: boolean
 }
 
 const Step2: FC = () => {
-    const {
-        forms: { name, address, phone, email },
-        setFormValues,
-    } = useFormContext();
+    const { register, formState: { errors } } = useFormContext<QueryFormValues>();
 
-
-    const handleChange = (key: Form['key']) => (
-        (e: ChangeEvent<HTMLInputElement>) => setFormValues(key, e.target.value)
-    )
-
-
-    const form: Form[] = [
+    const formFields: FormFields[] = [
         {
             id: 1,
             label: 'Your name (required)',
             key: 'name',
-            value: name,
             type: 'text',
             placeholder: 'your name',
             required: true
@@ -37,7 +28,6 @@ const Step2: FC = () => {
             id: 2,
             label: 'Your email (required)',
             key: 'email',
-            value: email,
             type: 'email',
             placeholder: 'your email',
             required: true
@@ -46,7 +36,6 @@ const Step2: FC = () => {
             id: 3,
             label: 'Your phone (required)',
             key: 'phone',
-            value: phone,
             type: 'phone',
             placeholder: 'your phone',
             required: true
@@ -55,7 +44,6 @@ const Step2: FC = () => {
             id: 4,
             label: 'Address (Street, Building Name, Apartment Number, Area)(required)',
             key: 'address',
-            value: address,
             type: 'text',
             placeholder: 'your address',
             required: true
@@ -65,17 +53,26 @@ const Step2: FC = () => {
         <div className="survey-step" data-step="2">
             <h1 className="modal-hdl">Your booking query</h1>
             <h2 className="modal-hdl">Contact Information</h2>
-            {form.map((input) => (
+            {formFields.map((input) => (
                 <label key={input.id}>
                     {input.label}
                     < input
                         type={input.type}
-                        value={input.value}
-                        onChange={handleChange(input.key)}
-                        name={input.key}
                         placeholder={input.placeholder}
-                        required={input.required}
+                        {...register(input.key, input.required ? {
+                            required: "Please filled in required field", minLength: {
+                                value: 2,
+                                message: "Min length is 2"
+                            }
+                        } : undefined)}
                     />
+                    {
+                        errors[input.key] && (
+                            <span className="">
+                                {(errors[input.key]?.message as string) || 'Please filled in all required fields'}
+                            </span>
+                        )
+                    }
                 </label>
             ))}
         </div >
