@@ -17,7 +17,7 @@ const Header = () => {
 
     return (
         <header>
-            <nav className='container'>
+            <nav className="container">
                 <div className="nav__firstRow">
                     <Link to="/" className="logo">
                         <img
@@ -27,20 +27,20 @@ const Header = () => {
                         />
                     </Link>
 
-                        {menuOpen ? (
-                            <img
-                                className="close__img"
-                                src={Close}
-                                onClick={handleMenu}
-                                alt="Close menu"
-                            />
-                        ) : (
-                            <div className="menu" onClick={handleMenu}>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                        )}
+                    {menuOpen ? (
+                        <img
+                            className="close__img"
+                            src={Close}
+                            onClick={handleMenu}
+                            alt="Close menu"
+                        />
+                    ) : (
+                        <div className="menu" onClick={handleMenu}>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    )}
                 </div>
                 <div className={`navbar__hamburger ${menuOpen ? 'open' : ''}`}>
                     <Navigation menuOpen={menuOpen} onItemClick={closeMenu} />

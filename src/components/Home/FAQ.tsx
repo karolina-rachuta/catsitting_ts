@@ -33,7 +33,7 @@ const faqList: FaqItem[] = [
     {
         id: 5,
         q: 'Can you feed my fish and water the plants while I am away?',
-        a: 'Yes, of course',
+        a: 'Yes, of course! I’d be happy to feed your fish and water your plants while you’re away.',
     },
     {
         id: 6,

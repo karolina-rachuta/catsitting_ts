@@ -36,10 +36,6 @@ function Query({ open, onClose, setIsOpen }: QueryPropsType) {
     };
 
     async function handleSubmit(e: FormEvent<HTMLFormElement>): Promise<void> {
-        // if (!forms.isValid) {
-        //     e.preventDefault();
-        //     alert('Please fill in all required fields before proceeding.');
-        // } else {
         e.preventDefault();
         const serviceID = process.env.REACT_APP_SERVICE_ID;
         const templateID = process.env.REACT_APP_QUERY_TEMPLATE_ID;

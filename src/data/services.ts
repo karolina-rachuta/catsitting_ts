@@ -1,19 +1,17 @@
 export type Service = {
     id: number;
-    src: string;
-    alt: string;
+    src?: string;
+    alt?: string;
     hdl: string;
     description: string;
     price: string;
-    href: string;
+    href?: string;
     label: string;
 };
 
 export const services: Service[] = [
     {
         id: 1,
-        src: '',
-        alt: '',
         hdl: 'Visit 30 min',
         description:
             'Spending 30 min together: feeding, cleaning the litter tray, playing, and keeping company.',
@@ -23,8 +21,6 @@ export const services: Service[] = [
     },
     {
         id: 2,
-        src: '',
-        alt: '',
         hdl: 'Visit 2 x 30min',
         description:
             'Spending twice a day 30 min together: feeding, cleaning the litter tray, playing, and providing companionship.',
@@ -34,8 +30,6 @@ export const services: Service[] = [
     },
     {
         id: 3,
-        src: '',
-        alt: '',
         hdl: 'Visit 1h',
         description:
             'Spending more time together: feeding, cleaning the litter tray, playing, and providing companionship',
@@ -45,8 +39,6 @@ export const services: Service[] = [
     },
     {
         id: 4,
-        src: '',
-        alt: '',
         hdl: 'Visit 2h',
         description:
             'Spending more time together: feeding, cleaning the litter tray, playing, and providing companionship',
@@ -56,8 +48,6 @@ export const services: Service[] = [
     },
     {
         id: 4,
-        src: '',
-        alt: '',
         hdl: 'Half day care (4h)',
         description:
             'Half-day cat sitting: feeding, cleaning the litter tray, playing, providing company, and giving lots of attention.',
@@ -67,8 +57,6 @@ export const services: Service[] = [
     },
     {
         id: 5,
-        src: '',
-        alt: '',
         hdl: 'Day care (8h)',
         description:
             'Full-day cat sitting: feeding, cleaning the litter tray, playing, providing company, and giving lots of attention.',

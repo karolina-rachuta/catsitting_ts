@@ -31,20 +31,20 @@ const menuList: MenuItem[] = [
     },
 ];
 
-const Navigation = ({ menuOpen, onItemClick }: NavigationProps) => {
+const Navigation = ({ onItemClick }: NavigationProps) => {
     return (
         <>
             {menuList.map((item, index) => (
-                    <ScrollLink
+                <ScrollLink
                     className="menu__link"
-                        to={item.href}
-                        key={index}
-                        smooth={true}
-                        duration={500}
-                        onClick={onItemClick}
-                    >
-                        {item.label}
-                    </ScrollLink>
+                    to={item.href}
+                    key={index}
+                    smooth={true}
+                    duration={500}
+                    onClick={onItemClick}
+                >
+                    {item.label}
+                </ScrollLink>
             ))}
         </>
     );
